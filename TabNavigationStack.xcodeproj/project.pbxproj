@@ -10,9 +10,6 @@
 		AE05F2AF2B0BCD5100A7151A /* RedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE05F2AE2B0BCD5100A7151A /* RedView.swift */; };
 		AE05F2B12B0BCD5B00A7151A /* BlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE05F2B02B0BCD5B00A7151A /* BlueView.swift */; };
 		AE05F2B32B0BCD6700A7151A /* GreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE05F2B22B0BCD6700A7151A /* GreenView.swift */; };
-		AE05F2B62B0BD00000A7151A /* SwiftUIIntrospect in Frameworks */ = {isa = PBXBuildFile; productRef = AE05F2B52B0BD00000A7151A /* SwiftUIIntrospect */; };
-		AE05F2B82B0BD00000A7151A /* SwiftUIIntrospect-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = AE05F2B72B0BD00000A7151A /* SwiftUIIntrospect-Dynamic */; };
-		AE05F2BA2B0BD00000A7151A /* SwiftUIIntrospect-Static in Frameworks */ = {isa = PBXBuildFile; productRef = AE05F2B92B0BD00000A7151A /* SwiftUIIntrospect-Static */; };
 		AE05F2BC2B0BD01E00A7151A /* CoordinatorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE05F2BB2B0BD01E00A7151A /* CoordinatorService.swift */; };
 		AE9A672F2B08E8AE004F1E08 /* TabNavigationStackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9A672E2B08E8AE004F1E08 /* TabNavigationStackApp.swift */; };
 		AE9A67312B08E8AE004F1E08 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9A67302B08E8AE004F1E08 /* ContentView.swift */; };
@@ -37,9 +34,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE05F2B62B0BD00000A7151A /* SwiftUIIntrospect in Frameworks */,
-				AE05F2B82B0BD00000A7151A /* SwiftUIIntrospect-Dynamic in Frameworks */,
-				AE05F2BA2B0BD00000A7151A /* SwiftUIIntrospect-Static in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,9 +104,6 @@
 			);
 			name = TabNavigationStack;
 			packageProductDependencies = (
-				AE05F2B52B0BD00000A7151A /* SwiftUIIntrospect */,
-				AE05F2B72B0BD00000A7151A /* SwiftUIIntrospect-Dynamic */,
-				AE05F2B92B0BD00000A7151A /* SwiftUIIntrospect-Static */,
 			);
 			productName = TabNavigationStack;
 			productReference = AE9A672B2B08E8AE004F1E08 /* TabNavigationStack.app */;
@@ -143,7 +134,6 @@
 			);
 			mainGroup = AE9A67222B08E8AE004F1E08;
 			packageReferences = (
-				AE05F2B42B0BD00000A7151A /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = AE9A672C2B08E8AE004F1E08 /* Products */;
 			projectDirPath = "";
@@ -318,6 +308,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -347,6 +338,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -382,35 +374,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		AE05F2B42B0BD00000A7151A /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		AE05F2B52B0BD00000A7151A /* SwiftUIIntrospect */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AE05F2B42B0BD00000A7151A /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = SwiftUIIntrospect;
-		};
-		AE05F2B72B0BD00000A7151A /* SwiftUIIntrospect-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AE05F2B42B0BD00000A7151A /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = "SwiftUIIntrospect-Dynamic";
-		};
-		AE05F2B92B0BD00000A7151A /* SwiftUIIntrospect-Static */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AE05F2B42B0BD00000A7151A /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = "SwiftUIIntrospect-Static";
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AE9A67232B08E8AE004F1E08 /* Project object */;
 }

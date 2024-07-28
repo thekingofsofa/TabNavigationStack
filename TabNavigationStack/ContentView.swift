@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-@_spi(Advanced) import SwiftUIIntrospect
 
 struct ContentView: View {
     
@@ -23,14 +22,10 @@ struct ContentView: View {
                     .navigationDestination(for: CoordinatorService.Step.self) { destination in
                         coordinator.resolve(pathItem: destination)
                     }
+                    .containerBackground(.clear, for: .navigation)
             }
             .zIndex(1)
             .allowsHitTesting(!coordinator.topPath.isEmpty)
-            .introspect(.navigationStack, on: .iOS(.v16, .v17)) {
-                $0.viewControllers.forEach { controller in
-                    controller.view.backgroundColor = .clear
-                }
-            }
         }
         .environmentObject(coordinator)
     }
