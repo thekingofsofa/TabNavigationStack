@@ -10,9 +10,11 @@
 		AE05F2AF2B0BCD5100A7151A /* RedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE05F2AE2B0BCD5100A7151A /* RedView.swift */; };
 		AE05F2B12B0BCD5B00A7151A /* BlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE05F2B02B0BCD5B00A7151A /* BlueView.swift */; };
 		AE05F2B32B0BCD6700A7151A /* GreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE05F2B22B0BCD6700A7151A /* GreenView.swift */; };
-		AE05F2BC2B0BD01E00A7151A /* CoordinatorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE05F2BB2B0BD01E00A7151A /* CoordinatorService.swift */; };
+		AE05F2BC2B0BD01E00A7151A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE05F2BB2B0BD01E00A7151A /* AppCoordinator.swift */; };
+		AE8654E62C7DCC320022AC6E /* InjectedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8654E52C7DCC260022AC6E /* InjectedTextView.swift */; };
+		AE9492202C7CB56D004B694D /* RouteDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE94921F2C7CB56D004B694D /* RouteDestination.swift */; };
 		AE9A672F2B08E8AE004F1E08 /* TabNavigationStackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9A672E2B08E8AE004F1E08 /* TabNavigationStackApp.swift */; };
-		AE9A67312B08E8AE004F1E08 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9A67302B08E8AE004F1E08 /* ContentView.swift */; };
+		AE9A67312B08E8AE004F1E08 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9A67302B08E8AE004F1E08 /* CoordinatorView.swift */; };
 		AE9A67332B08E8AF004F1E08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE9A67322B08E8AF004F1E08 /* Assets.xcassets */; };
 		AE9A67362B08E8AF004F1E08 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE9A67352B08E8AF004F1E08 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -21,10 +23,12 @@
 		AE05F2AE2B0BCD5100A7151A /* RedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedView.swift; sourceTree = "<group>"; };
 		AE05F2B02B0BCD5B00A7151A /* BlueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueView.swift; sourceTree = "<group>"; };
 		AE05F2B22B0BCD6700A7151A /* GreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenView.swift; sourceTree = "<group>"; };
-		AE05F2BB2B0BD01E00A7151A /* CoordinatorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorService.swift; sourceTree = "<group>"; };
+		AE05F2BB2B0BD01E00A7151A /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		AE8654E52C7DCC260022AC6E /* InjectedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedTextView.swift; sourceTree = "<group>"; };
+		AE94921F2C7CB56D004B694D /* RouteDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDestination.swift; sourceTree = "<group>"; };
 		AE9A672B2B08E8AE004F1E08 /* TabNavigationStack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabNavigationStack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9A672E2B08E8AE004F1E08 /* TabNavigationStackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationStackApp.swift; sourceTree = "<group>"; };
-		AE9A67302B08E8AE004F1E08 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AE9A67302B08E8AE004F1E08 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
 		AE9A67322B08E8AF004F1E08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE9A67352B08E8AF004F1E08 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -40,14 +44,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AE05F2AD2B0BCD2F00A7151A /* SubViews */ = {
+		AE05F2AD2B0BCD2F00A7151A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AE8654E52C7DCC260022AC6E /* InjectedTextView.swift */,
 				AE05F2AE2B0BCD5100A7151A /* RedView.swift */,
 				AE05F2B02B0BCD5B00A7151A /* BlueView.swift */,
 				AE05F2B22B0BCD6700A7151A /* GreenView.swift */,
 			);
-			path = SubViews;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AE94921E2C7CB560004B694D /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				AE9A67302B08E8AE004F1E08 /* CoordinatorView.swift */,
+				AE05F2BB2B0BD01E00A7151A /* AppCoordinator.swift */,
+				AE94921F2C7CB56D004B694D /* RouteDestination.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		AE9A67222B08E8AE004F1E08 = {
@@ -70,9 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				AE9A672E2B08E8AE004F1E08 /* TabNavigationStackApp.swift */,
-				AE9A67302B08E8AE004F1E08 /* ContentView.swift */,
-				AE05F2BB2B0BD01E00A7151A /* CoordinatorService.swift */,
-				AE05F2AD2B0BCD2F00A7151A /* SubViews */,
+				AE94921E2C7CB560004B694D /* Navigation */,
+				AE05F2AD2B0BCD2F00A7151A /* Views */,
 				AE9A67322B08E8AF004F1E08 /* Assets.xcassets */,
 				AE9A67342B08E8AF004F1E08 /* Preview Content */,
 			);
@@ -163,10 +177,12 @@
 			files = (
 				AE05F2B12B0BCD5B00A7151A /* BlueView.swift in Sources */,
 				AE05F2B32B0BCD6700A7151A /* GreenView.swift in Sources */,
-				AE9A67312B08E8AE004F1E08 /* ContentView.swift in Sources */,
+				AE9492202C7CB56D004B694D /* RouteDestination.swift in Sources */,
+				AE9A67312B08E8AE004F1E08 /* CoordinatorView.swift in Sources */,
 				AE9A672F2B08E8AE004F1E08 /* TabNavigationStackApp.swift in Sources */,
-				AE05F2BC2B0BD01E00A7151A /* CoordinatorService.swift in Sources */,
+				AE05F2BC2B0BD01E00A7151A /* AppCoordinator.swift in Sources */,
 				AE05F2AF2B0BCD5100A7151A /* RedView.swift in Sources */,
+				AE8654E62C7DCC320022AC6E /* InjectedTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GreenView: View {
     
-    @EnvironmentObject var coordinator: CoordinatorService
+    @Environment(AppCoordinator.self) private var coordinator: AppCoordinator
     
     var body: some View {
         
@@ -17,16 +17,16 @@ struct GreenView: View {
             Color.green
             VStack {
                 Button {
-                    coordinator.topPath.append(.blue)
+                    navigateToTextViewOnTop()
                 } label: {
-                    Text("Add Blue on Top")
+                    Text("Add Text View on Top")
                         .font(.headline)
                         .foregroundStyle(.white)
                         .padding()
                 }
                 
                 Button {
-                    coordinator.thirdTabPath.append(.blue)
+                    navigateToBlueView()
                 } label: {
                     Text("Add Blue")
                         .font(.headline)
@@ -37,3 +37,22 @@ struct GreenView: View {
         }
     }
 }
+
+// MARK: - Router
+
+extension GreenView {
+    
+    func navigateToTextViewOnTop() {
+        
+        let view = InjectedTextView(text: "Text View\nOn top of Green View")
+        let destination = RouteDestination(view: AnyView(view))
+        coordinator.topPath.append(destination)
+    }
+    
+    func navigateToBlueView() {
+        
+        let destination = RouteDestination(view: AnyView(BlueView()))
+        coordinator.appendToActiveType(destination)
+    }
+}
+
